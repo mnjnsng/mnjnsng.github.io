@@ -9,15 +9,14 @@ paperurl: "https://arxiv.org/pdf/2203.15872"
 citation: "Sung, Minjun, et al. Protective Mission against a Highly Maneuverable Rogue Drone Using Defense Margin Strategy.&quot; arXiv preprint arXiv:2203.15872 (2022).&quot;"
 ---
 
-[Download paper here](https://arxiv.org/pdf/2203.15872)
-
-## Abstract
+<p><a href="https://arxiv.org/pdf/2203.15872">Download paper here</a></p>
+<h2>Abstract</h2>
 
 The current paper studies a protective mission to defend a domain called the safe zone from a rogue drone invasion. We consider a one attacker and one defender drone scenario where only a noisy observation of the attacker at every time step is accessible to the defender. Directly applying strategies used in existing problems such as pursuit-evasion games are shown to be insufficient for this mission. We introduce a new concept of defense margin to complement an existing strategy and construct a control strategy that successfully solves our problem. We provide analysis to point out the limitations of the existing strategy and how our defense margin strategy can enhance the performance. Simulation results show that our strategy outperforms that of the existing strategy at least by 36.0 percentage points in terms of protective mission success.
 
-## Results
+<h2>Results</h2>
 
-In the presence of observational noise, naively following the widely adopted guidance law called the _Pure Pursuit (PP)_ strategy is only effective only for some limited conditions (Theorem III.2). This is primarily because the PP strategy only aims to minimize the distance to the attacker, making it a highly aggressive strategy without considering its primary mission to protect to _safe zone_. Consequently, we define a more conservative strategy via the proposed concept called the _Defense Margin (DM)_. By adaptively parameterizing between the PP and DM strategy _(ADM)_, we obtain a highly effective stratety that effectively solves the protective mission.
+In the presence of observational noise, naively following the widely adopted guidance law called the <i>Pure Pursuit (PP)</i> strategy is only effective only for some limited conditions (Theorem III.2). This is primarily because the PP strategy only aims to minimize the distance to the attacker, making it a highly aggressive strategy without considering its primary mission to protect to <i>safe zone</i>. Consequently, we define a more conservative strategy via the proposed concept called the <i></i>Defense Margin (DM)</i>. By adaptively parameterizing between the PP and DM strategy <i>(ADM)</i>, we obtain a highly effective stratety that effectively solves the protective mission.
 
 <p float = "left", align = "center">
 <img src = https://github.com/mnjnsng/mnjnsng.github.io/blob/master/images/publication/rogue_drone/ppvsintelligent.gif?raw=true width="200" height="200"/>
@@ -25,7 +24,7 @@ In the presence of observational noise, naively following the widely adopted gui
 <img src = https://github.com/mnjnsng/mnjnsng.github.io/blob/master/images/publication/rogue_drone/oursavsintelligent.gif?raw=true width="200" height="200"/>
 </p>
 
-Demonstration of PP strategy **(left)** , DM strategy **(center)**, and ADM strategy **right**. Blue indicates a defender, red an attacker, and orange a noisy observation of an attacker. The green circle is the safe zone which the defender aims to keep intact from the attacker.
+Demonstration of PP strategy <b>(left)</b> , DM strategy <b>(center)</b>, and ADM strategy <b>right</b>. Blue indicates a defender, red an attacker, and orange a noisy observation of an attacker. The green circle is the safe zone which the defender aims to keep intact from the attacker.
 
 <p align = "center">
 <img src = https://github.com/mnjnsng/mnjnsng.github.io/blob/master/images/publication/rogue_drone/winpercentage.png?raw=true width = 550/>
