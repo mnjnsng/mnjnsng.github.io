@@ -1,7 +1,44 @@
 ---
-title: "Portfolio item number 2"
-excerpt: "Short description of portfolio item number 2 <br/><img src='/images/500x300.png'>"
+title: "Autonomous Vehicle (Polaris Gem) Projects"
+excerpt: "Pedestrian detection, PID control to follow waypoints, and indoor/outdoor SLAM.
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+<h2>Pedestrian detection</h2>
+<p>Autonomous vehicles have the potential to revolutionize transportation and make our roads safer. One important aspect of autonomous vehicle technology is the ability to detect and react to obstacles in the road. We explore the use of an RGB camera and the opencv library to develop a system that can detect pedestrians and automatically brake the car to avoid collision. By using opencv to process the video feed from the RGB camera, we are able to identify the shape and movement of objects in the road. When a pedestrian is detected, the system sends a signal to the brakes to bring the car to a stop.</p>
+
+<p>We realized the pedestrian detection and braking particularly using the HOG (Histogram of Oriented Gradients) algorithm. The HOG algorithm is a feature descriptor used in computer vision and image processing to represent the shape and appearance of an object in an image. It is commonly used for object detection tasks, such as pedestrian detection and facial recognition. </p>
+
+<p>
+The HOG algorithm works by dividing the input image into small cells and computing a histogram of gradient directions within each cell. The gradient direction at a particular pixel is calculated by taking the gradient of the image intensity at that pixel, which is a measure of how quickly the intensity changes as we move across the image. The gradient is typically calculated using the Sobel operator, which is a finite difference approximation of the gradient.</p>
+
+<p>
+The Sobel operator can be represented by the following equations: 
+
+<p align = "center">
+<img src="https://latex.codecogs.com/svg.image?G_x(x,y)&space;=&space;(I(x&plus;1,y)&space;-&space;I(x-1,y))/2" title="https://latex.codecogs.com/svg.image?G_x(x,y) = (I(x+1,y) - I(x-1,y))/2" /><br>
+<img src="https://latex.codecogs.com/svg.image?G_y(x,y)&space;=&space;(I(x,y&plus;1)&space;-&space;I(x,y-1))/2" title="https://latex.codecogs.com/svg.image?G_y(x,y) = (I(x,y+1) - I(x,y-1))/2" />
+</p>
+
+
+where <img src="https://latex.codecogs.com/svg.image?I(x,y)" title="https://latex.codecogs.com/svg.image?I(x,y)" /> is the intensity of the pixel at position <img src="https://latex.codecogs.com/svg.image?(x,y)" title="https://latex.codecogs.com/svg.image?(x,y)" /> in the image, <img src="https://latex.codecogs.com/svg.image?G_x(x,y)" title="https://latex.codecogs.com/svg.image?G_x(x,y)" /> is the gradient in the <img src="https://latex.codecogs.com/svg.image?x" title="https://latex.codecogs.com/svg.image?x" /> direction, and <img src="https://latex.codecogs.com/svg.image?G_y(x,y)" title="https://latex.codecogs.com/svg.image?G_y(x,y)" /> is the gradient in the <img src="https://latex.codecogs.com/svg.image?y" title="https://latex.codecogs.com/svg.image?y" /> direction.
+</p>
+
+
+<p>The gradient direction at each pixel is then calculated as the arctangent of the <img src="https://latex.codecogs.com/svg.image?y" title="https://latex.codecogs.com/svg.image?y" /> gradient divided by the <img src="https://latex.codecogs.com/svg.image?x" title="https://latex.codecogs.com/svg.image?x" /> gradient:
+<p align = "center">
+    <img src="https://latex.codecogs.com/svg.image?\theta(x,y)&space;=&space;\arctan\left(\frac{G_y(x,y)}{&space;G_x(x,y)}\right)" title="https://latex.codecogs.com/svg.image?\theta(x,y) = \arctan\left(\frac{G_y(x,y)}{ G_x(x,y)}\right)" />
+</p>
+
+The HOG algorithm then divides the image into small cells and computes a histogram of gradient directions within each cell. The histogram is a distribution of the number of pixels within each cell that have a particular gradient direction. The resulting histogram is used as a feature descriptor for the object in the image.</p>
+
+<p>
+By comparing the HOG feature descriptor of an object to a database of HOG feature descriptors for known objects, we can identify the object in the image and determine its position and orientation. The HOG algorithm is particularly effective at object detection tasks because it is able to capture the shape and appearance of the object, which is important for distinguishing it from other objects and background clutter in the image.
+</p>
+<p align = "center">
+<video width="500" controls autoplay>
+    <source src="/images/portfolio/Autonomous_vehicles/pedestrian_detection.MOV" type="video/quicktime">
+    <source src="/images/portfolio/Autonomous_vehicles/pedestrian_detection.MOV" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+</p>

@@ -8,8 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-# About Me
-
 Hello! I am currently working towards a Ph.D. degree at the University of Illinois Urbana-Champaign in the [Mechanical Science and Engineering departement](https://mechse.illinois.edu/) since January 2021. Also, I am enrolled in the [Data Science & Engineering (DSE) Graduate Concentration program](https://cse.illinois.edu/cse-educational-programs/dse-graduate-concentration/) provided by the Computational Science and Engineering department since January 2023. I am affiliated to the [Advanced Controls Research Laboratory](http://naira.mechse.illinois.edu/), supervised by Professor Naira Hovakimyan. My research interest is in bridging data-driven control framework to that of robust & adaptive control for autonomous systems in order to maximize the performance while minimizing the safety risk.
 
 Currently, I am the PI of the project **Congestion Aware Path Planning for Optimal UAS Traffic Management** supported by [NASA](https://nari.arc.nasa.gov/usrc) (May 2022 - Current). Description of our work including the interview can be found [here](https://mechse.illinois.edu/news/46992), and we will largely appreciate any penny to support our work via [crowdfunding](https://gofund.me/5ea95d35).
