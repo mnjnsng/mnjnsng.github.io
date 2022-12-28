@@ -3,6 +3,8 @@ title: "Autonomous Vehicle (Polaris Gem) Projects"
 excerpt: "Pedestrian detection, PID control to follow waypoints, and indoor/outdoor SLAM. <br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
+<p>All the codes of this project can be found <a href="https://github.com/mnjnsng/PolarisGem">here</a></p>
+
 
 <h2>Pedestrian detection</h2>
 <p>Autonomous vehicles have the potential to revolutionize transportation and make our roads safer. One important aspect of autonomous vehicle technology is the ability to detect and react to obstacles in the road. We explore the use of an RGB camera and the opencv library to develop a system that can detect pedestrians and automatically brake the car to avoid collision. By using opencv to process the video feed from the RGB camera, we are able to identify the shape and movement of objects in the road. When a pedestrian is detected, the system sends a signal to the brakes to bring the car to a stop.</p>
@@ -33,12 +35,97 @@ where <img src="https://latex.codecogs.com/svg.image?I(x,y)" title="https://late
 The HOG algorithm then divides the image into small cells and computes a histogram of gradient directions within each cell. The histogram is a distribution of the number of pixels within each cell that have a particular gradient direction. The resulting histogram is used as a feature descriptor for the object in the image.</p>
 
 <p>
-By comparing the HOG feature descriptor of an object to a database of HOG feature descriptors for known objects, we can identify the object in the image and determine its position and orientation. The HOG algorithm is particularly effective at object detection tasks because it is able to capture the shape and appearance of the object, which is important for distinguishing it from other objects and background clutter in the image.
+By comparing the HOG feature descriptor of an object to a database of HOG feature descriptors for known objects, we can identify the object in the image and determine its position and orientation. The HOG algorithm is particularly effective at object detection tasks because it is able to capture the shape and appearance of the object, which is important for distinguishing it from other objects and background clutter in the image. The following video is the realization of the pedestrian detector and autonomous braking on the PolarisGem electric vehicle operated via ROS. 
 </p>
 <p align = "center">
 <video width="500" controls autoplay>
     <source src="/images/portfolio/Autonomous_vehicles/pedestrian_detection.MOV" type="video/quicktime">
     <source src="/images/portfolio/Autonomous_vehicles/pedestrian_detection.MOV" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+</p>
+
+<h2>PID Control</h2>
+<p>Proportional-Integral-Derivative (PID) control and is a feedback control system that continuously adjusts a control output in order to achieve a desired setpoint. The PID controller uses three separate control terms, each with its own unique function:
+    <ul>
+        <li><b>Proportional (P) control</b>: This term is based on the current error between the setpoint and the measured output. The larger the error, the larger the correction applied by the proportional control.</li>
+    
+        <li><b>Integral (I) control</b>: This term is based on the accumulated error over time. It helps to eliminate steady-state error, which is the difference between the setpoint and the measured output that persists even when the system is in steady-state.</li>
+        
+        <li><b>Derivative (D) control</b>: This term is based on the rate of change of the error. It helps to reduce overshoot and oscillations in the system.</li>
+    </ul>
+
+The PID controller adjusts the control output using the following equation:</p>
+<p align = "center">
+<img src="https://latex.codecogs.com/svg.image?K_p\cdot&space;P&space;&plus;&space;K_i&space;\cdot&space;&space;I&space;&plus;&space;K_d&space;\cdot&space;D" title="https://latex.codecogs.com/svg.image?K_p\cdot P + K_i \cdot I + K_d \cdot D" /></p>
+
+The values of Kp, Ki, and Kd can be adjusted to fine-tune the performance of the PID controller. A common approach is to use the "Ziegler-Nichols method" to determine the initial values of the gains, and then fine-tune them through trial and error. The following video applied the Ziegler-Nichols method to simulate the follow the given waypoints. Specifically, Kp = 0.09, Ki = 0.0144, Kd = 1.406 for this case.
+
+</p>
+<p align = "center">
+<video width="500" controls autoplay>
+    <source src="/images/portfolio/Autonomous_vehicles/pid_1.mp4" type="video/quicktime">
+    <source src="/images/portfolio/Autonomous_vehicles/pid_1.mp4" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+</p>
+
+<p>What happens if the PID controller is not properly tuned? Obviously, it leads to a poor control performance, and it can manifest in a number of ways, including: 
+    <ul>
+        <li>Oscillations or instability in the control output</li>
+    
+        <li>Slow or sluggish response to changes in the system</li>
+        
+        <li>Excessive overshoot or undershoot of the setpoint</li>
+
+        <li>Excessive steady-state error</li>
+    </ul>
+</p>
+
+The following video demonstrates the oscillatory case that is particularly actualized by high proportional gain value. We set Kp, = 10.0 Ki, = 0.2 Kd, = 0.1.
+
+</p>
+<p align = "center">
+<video width="500" controls autoplay>
+    <source src="/images/portfolio/Autonomous_vehicles/pid_2.mp4" type="video/quicktime">
+    <source src="/images/portfolio/Autonomous_vehicles/pid_2.mp4" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+</p>
+
+<h2>SLAM</h2>
+
+<p>
+Simultaneous Localization and Mapping (SLAM) is a fundamental problem in robotics and computer vision. It involves using sensors and algorithms to build a map of an unknown environment while simultaneously determining the location of the robot within that environment.</p>
+
+<p>There are several approaches to solving the SLAM problem, including feature-based methods and graph-based methods. Here we will focus on graph-based SLAM, which involves representing the robot's trajectory and the map as a graph and using optimization techniques to estimate the unknown variables.</p>
+
+<p>The main components of a graph-based SLAM system are:
+
+    <ul>
+        <li>Robot poses: These represent the location and orientation of the robot at each time step.</li>
+    
+        <li>Map features: These are points or landmarks in the environment that can be observed by the robot's sensors.</li>
+        
+        <li>Sensory data: This is the data collected by the robot's sensors, such as range measurements or images.
+        </li>
+    </ul>
+
+To solve the SLAM problem, we need to estimate the robot poses and map features that best explain the sensory data. This can be done using optimization techniques, such as least squares or maximum likelihood estimation. The optimization problem is solved by iteratively updating the estimate of the robot poses and map features until the difference between the predicted and measured sensory data is minimized. The following videos are our implementation of SLAM in the PolarisGem, indoor and outdoor.</p>
+
+</p>
+<p align = "center">
+<video width="500" controls autoplay>
+    <source src="/images/portfolio/Autonomous_vehicles/indoor_slam.MOV" type="video/quicktime">
+    <source src="/images/portfolio/Autonomous_vehicles/indoor_slam.MOV" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+</p>
+</p>
+<p align = "center">
+<video width="500" controls autoplay>
+    <source src="/images/portfolio/Autonomous_vehicles/outdoor_slam.MOV" type="video/quicktime">
+    <source src="/images/portfolio/Autonomous_vehicles/outdoor_slam.MOV" type="video/webm">
     Your browser does not support the video tag.
 </video>
 </p>
