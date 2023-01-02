@@ -23,7 +23,7 @@ We can write this compactly in a vector form as
 
 $$Q_{k+1} = Q_k - \epsilon_k(D_k Q_k - D_k r_k- \gamma E_k Q_k)$$
 
-where $D_k := \text{diag}(I_{(s_k,a_k) = (s,a)})$ and $E_k := \text{diag}(I_{(s_k,a_k) = (s,a)\: \&\:(s_{k+1},a_{k+1}) = (s',a')})$ are indicator functions that vectorizes the asynchronous update law.
+where $$D_k := \text{diag}(I_{(s_k,a_k) = (s,a)})$$ and $$E_k := \text{diag}(I_{(s_k,a_k) = (s,a)\: \&\:(s_{k+1},a_{k+1}) = (s',a')})$$ are indicator functions that vectorizes the asynchronous update law.
 
 Now assume that the transition dynamics $P^\pi$ that follows the given policy $\pi$, is irreducible such that there exists a stationary distribution $d^\pi$. Further suppose that $(s_k,a_k) \sim d^\pi$ such that each state and action pair for an asynchronous update is sampled from the stationary distribution. Then,
 
@@ -53,7 +53,7 @@ $$Q_{k+1} =  Q_k -\epsilon_k D^\pi(Q_k-\bar{r}-\gamma P^\pi Q_k) = Q_k - \epsilo
 
 where the second equality is from the definition of the Bellman operator $T^\pi$.
 
-Now define $W(Q_k) := \frac{1}{2} \|Q_k-Q^\pi\|^2_2$. We will show that $W(Q_k)\rightarrow 0$ as $k\rightarrow \infty $ such that $Q_k \rightarrow Q^\pi $. This indicates convergence of the $Q$ function under TD learning with the absence of noise. Defining $W(Q_k)$ and proving its convergence to $0$ is resembles a technique using a *Lyapunov function* to prove the stability of an ODE.
+Now define $$W(Q_k) := \frac{1}{2} \|Q_k-Q^\pi\|^2_2$$. We will show that $W(Q_k)\rightarrow 0$ as $k\rightarrow \infty $ such that $Q_k \rightarrow Q^\pi $. This indicates convergence of the $Q$ function under TD learning with the absence of noise. Defining $W(Q_k)$ and proving its convergence to $0$ is resembles a technique using a *Lyapunov function* to prove the stability of an ODE.
 
 *Proof*.
 
@@ -75,7 +75,7 @@ $$\begin{aligned}
 &\quad \quad \: + \epsilon_k^2\left(\|Q_k-Q^\pi\|^2_{D^\pi} + \|T^\pi Q_k-T^\pi Q^\pi\|^2_{D^\pi}\right)
 \end{aligned}$$
 
-It turns out that $T^\pi$ is a contraction mapping with respect to $\|\cdot\|_{D^\pi}$ (we will prove it shortly). Consequently the inequality becomes
+It turns out that $T^\pi$ is a contraction mapping with respect to $$\|\cdot\|_{D^\pi}$$ (we will prove it shortly). Consequently the inequality becomes
 
 $$\begin{aligned}
 &\leq -\epsilon_k \|Q_k-Q^\pi\|^2_{D^\pi} + \epsilon_k \gamma \|Q_k-Q^\pi\|^2_{D^\pi} + \epsilon_k^2\left(\|Q_k-Q^\pi\|^2_{D^\pi} + \gamma^2\|Q_k-Q^\pi\|^2_{D^\pi}\right)\\
@@ -94,7 +94,7 @@ $$W(Q_{k+1})\leq \beta W(Q_k) \leq \cdots \leq \beta^kW(Q_0)$$
 
 where $\beta \in [0,1)$. As such, $W(Q_k)\rightarrow 0$ as $k\rightarrow \infty$, indicating the convergence of the $Q$-function.
 
-As we have mentioned above we still have to prove that $T^\pi$ is a $\|\cdot\|_{D^\pi}$ contraction to complete the proof. Recall that $T^\pi Q := \bar{r}+\gamma P^\pi Q$. Then,
+As we have mentioned above we still have to prove that $T^\pi$ is a $$\|\cdot\|_{D^\pi}$$ contraction to complete the proof. Recall that $T^\pi Q := \bar{r}+\gamma P^\pi Q$. Then,
 
 $$\begin{aligned}
 \|T^\pi Q_1 - T^\pi Q_2\|^2_{D^\pi} &= \|\gamma P^\pi (Q_1-Q_2)\|^2_{D^\pi}\\
