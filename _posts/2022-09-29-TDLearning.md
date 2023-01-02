@@ -1,5 +1,5 @@
 ---
-title: 'Temporal Difference (TD) Learning: Idea and its analysis'
+title: 'Temporal Difference (TD) Learning: Understanding the idea'
 date: 2022-09-29
 permalink: /posts/2022/09/tdlearning/
 tags:
