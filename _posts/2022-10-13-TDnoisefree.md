@@ -64,7 +64,7 @@ W(Q_{k+1}) - W(Q_k) &= \nabla^\top W(Q_k)(Q_{k+1}-Q_k) + \frac{1}{2}\|Q_{k+1}-Q_
 & \quad \quad \: +\frac{1}{2} \epsilon_k^2\|Q_k- T^\pi Q^\pi + T^\pi Q^\pi -T^\pi Q_k\|^2_{(D^\pi)^2}
 \end{aligned}$$
 
-where the last norm is a weighted 2-norm with weight matrix being $(D^\pi)^2$. Elsewhere is simply a 2-norm. Note that $T^\pi Q^\pi \equiv Q^\pi$ by the definition of the Bellman equation. We also have that $ \| x+y \| ^2 \leq 2( \| x \| ^2+ \| y \| ^2)$, and $ \| \cdot \|_{(D^\pi)^2} \leq \| \cdot \|_{D^\pi}$ since each element in $D^\pi$ is less than or equal to 1. Using these ideas, we can further reduce the above equality as follows.
+where the last norm is a weighted 2-norm with weight matrix being $(D^\pi)^2$. Elsewhere is simply a 2-norm. Note that $T^\pi Q^\pi \equiv Q^\pi$ by the definition of the Bellman equation. We also have that  $$\| x+y \|^2 \leq 2( \| x \|^2+ \|y\|^2)$$ and $$\| \cdot \|_{(D^\pi)^2} \leq \| \cdot \|_{D^\pi}$$ since each element in $D^\pi$ is less than or equal to 1. Using these ideas, we can further reduce the above equality as follows.
 
 $$\begin{aligned}
 &= -\epsilon_k (Q_k-Q^\pi)^\top D^\pi (Q_k- T^\pi Q^\pi + T^\pi Q^\pi -T^\pi Q_k)\\
