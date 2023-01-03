@@ -6,9 +6,7 @@ tags:
   - TD learning
   - Noise-free analysis
 ---
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+
 In the previous [post](https://mnjnsng.github.io/posts/2022/09/tdlearning/), we have discussed the basic idea about the TD learning. In this post, we will go deeper into its analysis and prove the convergence of the TD learning under *noise-free* case, which we will describe shortly.
 
 ## Revisiting TD learning
