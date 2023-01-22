@@ -38,7 +38,7 @@ $$
 
 retrieving the TD learning algorithm.
 
-Now, the idea of the LFA is to apply this idea to the parameters of the linear approximation of the Q-function instead of Q-function itself. Formally, assume that there exists a feature vector $\phi(s,a)$ such that the Q-function can be represented as $$ Q(s,a) - \theta^\top \phi(s,a)$$ for $$\theta \in \mathbb{R}^d, \quad d \ll |\mathcal{S}||\mathcal{A}|$$, where $$\theta$$ is the parameter vector.
+Now, the idea of the LFA is to apply this idea to the parameters of the linear approximation of the Q-function instead of Q-function itself. Formally, assume that there exists a feature vector $$\phi(s,a)$$ such that the Q-function can be represented as $$ Q(s,a) = \theta^\top \phi(s,a)$$ for $$\theta \in \mathbb{R}^d, \quad d \ll |\mathcal{S}||\mathcal{A}|$$, where $$\theta$$ is the parameter vector.
 
 Having the linear representation, we update the parameter vector according to the one-step gradient rule. In particular, plug replace $$Q_k(s,a)$$ in the minimization above with $$\theta_k^\top \phi(s,a)$$ and apply the one-step gradient descent. This yields
 
