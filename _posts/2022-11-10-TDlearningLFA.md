@@ -16,7 +16,7 @@ The problem of tabular approach is that the cardinality of $$\mathcal{S}\times\m
 
 Let's first rewrite the TD learning algorithm.
 
-$$ Q\_{k+1}(s,a) = (1-\epsilon_k)Q_k + \epsilon_k(r(s,a)+\gamma Q_k(s',a')).$$
+$$Q_{k+1} (s,a) = (1-\epsilon_k)Q_k + \epsilon_k(r(s,a)+\gamma Q_k(s',a')).$$
 
 Notice that this is equivalent to an _one-step gradient_ to minimize
 
