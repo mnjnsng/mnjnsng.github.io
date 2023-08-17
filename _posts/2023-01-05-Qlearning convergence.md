@@ -12,10 +12,8 @@ As we discussed in the previous [post](https://mnjnsng.github.io/posts/2022/12/Q
 
 #### Lemma (norm equivalence)
 
-If  $\|TQ_1-TQ_2\|_\infty \leq \gamma \|Q_1-Q_2\|_\infty$, then the following inequality holds"
-$$\|TQ_1-TQ_2\|_{w,p} \leq \gamma_{w,p} \|Q_1-Q_2\|_{w,p},$$
-
-where $\|\cdot\|_{w,p} \triangleq (\sum_{i}w_i|\cdot|^p)^{\frac{1}{p}}$.
+If $$\|TQ_1-TQ_2\|_\infty \leq \gamma \|Q_1-Q_2\|_\infty$$, then the following inequality holds:
+$$\|TQ_1-TQ_2\|_{w,p} \leq \gamma_{w,p} \|Q_1-Q_2\|_{w,p},$$ where $$\|\cdot\|_{w,p} \triangleq (\sum_{i}w_i|\cdot|^p)^{\frac{1}{p}}$$.
 
 Such property holds true when the vector space is finite-dimensional real or complex one. In our case, we are considering fininte cardinality of $\mathcal{S}\times \mathcal{A}$, and therefore such lemma holds.
 
@@ -42,6 +40,7 @@ $$
 We will prove that (1) $\leq -C_1\epsilon_k W(Q_k)$ and $(2) \leq C_2 \epsilon_k^2 W(Q_k)$, and thus obtain $W(Q_{k+1}) \leq (1-C_1\epsilon_k+C_2\epsilon_k^2)W(Q_k),$ which implies that with the wise choice of $\epsilon$, the Lyapunov function will converge; proving the convergence of the Q-learning algorithm.
 
 The first part can be proved as follows:
+
 $$
 \begin{aligned}
 \nabla^\top W(Q_k)(Q_{k+1}-Q_k) &= -\epsilon_k \nabla^\top W(Q_k)D^\pi (Q_k-TQ_k) ~~(\because \text{ Q-learning algorithm})\\
@@ -54,20 +53,25 @@ $$
 for some $C_1>0$.
 
 Likewise,
+
 $$
 \begin{aligned}
 \frac{p-1}{2}\|Q_{k+1}-Q_k\|^2_p &= \frac{(p-1)\epsilon_k^2}{2}\|D^\pi(Q_k-TQ_k)\|_p^2\\
 &\leq \frac{(p-1)\epsilon_k^2}{2} 2\left(\|D^\pi(Q_k-Q)\|^2_p + \|D^\pi(Q-TQ_k)\|^2_p\right)~~~(\because (a+b)^2\leq 2(a^2+b^2)).
 \end{aligned}
 $$
+
 Whereas, we have
+
 $$
 \begin{aligned}
 \|D^\pi(Q_k-Q)\|_p^p &= \sum_{(s,a)}(d^\pi(s,a))^p|Q_k(s,a)-Q(s,a)|^p\\
 &\leq d_{\max}^p \sum_{(s,a)}|Q_k(s,a)-Q(s,a)|^p.
 \end{aligned}
 $$
+
 Consequently,
+
 $\|D^\pi(Q_k-Q)\|_p^2\|\leq d_{\max}^2 \|Q_k-Q\|^2$, and
 
 $$
@@ -80,6 +84,7 @@ $$
 $$
 
 Putting it together,
+
 $$
 \begin{aligned}
 \frac{p-1}{2}\|Q_{k+1}-Q_k\|^2_p &\leq (p-1)\epsilon_k^2(d_{\max}^2 + d_{\max}\tilde{\gamma}^2)\|Q_k-Q\|_p^2\\
