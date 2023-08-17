@@ -45,7 +45,7 @@ $$\begin{aligned}
 
 Here $X_k$ is a random variable sampled at time step $k$. Inspired byt this observation, we may update $Q$ value not directly with the noisy observation but with the mean estimation of the $Q$ value:
 
-$$Q_k^\pi (s,a) = (1-\epsilon_k)Q_k^\pi(s,a) + \epsilon_k(r(s,a) + \gamma Q_k^\pi(s',a')).$$
+$$Q_{k+1}^\pi (s,a) = (1-\epsilon_k)Q_k^\pi(s,a) + \epsilon_k(r(s,a) + \gamma Q_k^\pi(s',a')).$$
 
 This is the TD learning algorithm. Note that in the mean estimation example we particularly used $\epsilon_n = 1/(n+1)$, but in the TD learning we may choose any $\epsilon_k $ that  $\epsilon_k \rightarrow 0$ as $k\rightarrow \infty$ in general.
 
