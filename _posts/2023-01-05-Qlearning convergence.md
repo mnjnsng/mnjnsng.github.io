@@ -75,7 +75,7 @@ $$
 
 Consequently,
 
-$\|D^\pi(Q_k-Q)\|_p^2\|\leq d_{\max}^2 \|Q_k-Q\|^2$, and
+$$\|D^\pi(Q_k-Q)\|_p^2\|\leq d_{\max}^2 \|Q_k-Q\|^2$$, and
 
 $$
 \begin{aligned}
