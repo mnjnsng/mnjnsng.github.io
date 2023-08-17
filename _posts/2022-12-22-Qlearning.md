@@ -28,9 +28,9 @@ As we have done previously, we rewrite this equation in a vector form:
 
 $$Q_{k+1} = Q_k-\epsilon_k D^\pi (Q_k-TQ_k) - \epsilon_k n_k,$$
 
-where $D^\pi := diag(d^\pi)$, $d^\pi$ being the stationary distribution for $P^\pi$. Since the actual samples are not sampled from such distribution, resulting discrepancy are lumped in the noise term $n_k$.
+where $$D^\pi := diag(d^\pi)$, $d^\pi$$ being the stationary distribution for $P^\pi$. Since the actual samples are not sampled from such distribution, resulting discrepancy are lumped in the noise term $n_k$.
 
-Now, the big question is whether this algorithm converges. This problem is more difficult to analyze, even in the noise free ($n_k=0$) case, due to the maximum operator being part of the algorithm. To be specific, as detailed in this [post](https://mnjnsng.github.io/posts/2022/10/tdlearning-noisefree/), we used a Lyapunov analysis using the contractive property of $T^\pi$ to prove the convergence of the algorithm. However, having the maximum operator in the algorithm, the contractive property is in $\|\cdot\|_\infty$ norm, or formally,
+Now, the big question is whether this algorithm converges. This problem is more difficult to analyze, even in the noise free ($n_k=0$) case, due to the maximum operator being part of the algorithm. To be specific, as detailed in this [post](https://mnjnsng.github.io/posts/2022/10/tdlearning-noisefree/), we used a Lyapunov analysis using the contractive property of $T^\pi$ to prove the convergence of the algorithm. However, having the maximum operator in the algorithm, the contractive property is in $$\|\cdot\|_\infty$$ norm, or formally,
 
 $$\|TQ_1-TQ_2\|_ {\infty} \leq \gamma \|Q_1-Q_2\|_ {\infty}.$$
 

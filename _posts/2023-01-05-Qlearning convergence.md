@@ -13,7 +13,10 @@ As we discussed in the previous [post](https://mnjnsng.github.io/posts/2022/12/Q
 #### Lemma (norm equivalence)
 
 If $$\|TQ_1-TQ_2\|_\infty \leq \gamma \|Q_1-Q_2\|_\infty$$, then the following inequality holds:
-$$\|TQ_1-TQ_2\|_{w,p} \leq \gamma_{w,p} \|Q_1-Q_2\|_{w,p},$$ where $$\|\cdot\|_{w,p} \triangleq (\sum_{i}w_i|\cdot|^p)^{\frac{1}{p}}$$.
+
+$$\|TQ_1-TQ_2\|_{w,p} \leq \gamma_{w,p} \|Q_1-Q_2\|_{w,p},$$
+
+where $$\|\cdot\|_{w,p} \triangleq (\sum_{i}w_i|\cdot|^p)^{\frac{1}{p}}$$.
 
 Such property holds true when the vector space is finite-dimensional real or complex one. In our case, we are considering fininte cardinality of $\mathcal{S}\times \mathcal{A}$, and therefore such lemma holds.
 
@@ -93,4 +96,7 @@ $$
 $$
 
 Therefore, as we stated before, we have
-$$W(Q_{k+1})\leq (1-C_1\epsilon_k +C_2\epsilon_k^2)W(Q_k),$$ indicating the convergence of the lyapunov function, and hence, the Q-function.
+
+$$W(Q_{k+1})\leq (1-C_1\epsilon_k +C_2\epsilon_k^2)W(Q_k),$$
+
+indicating the convergence of the lyapunov function, and hence, the Q-function.
