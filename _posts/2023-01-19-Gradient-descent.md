@@ -63,7 +63,7 @@ f(x_{k+1})-f(x_k) &\leq \langle \nabla f(x_k),x_{k+1}-x_k \rangle + \frac{L}{2}\
 \end{aligned}
 $$
 
-Now let $$f^_\triangleq \inf_x f(x)$$, and $x^_$ be its argument. Also, let $\epsilon_k \equiv \epsilon \leq 1/L$. Lastly, assume $f$ to be a convex. Subsequently, we have that $$-\epsilon(1-\frac{L\epsilon}{2})\leq -\frac{1}{2}.$$ Plugging this back into the above inequality yields
+Now let $$f^\star\triangleq \inf_x f(x)$$, and $x^\star$ be its argument. Also, let $\epsilon_k \equiv \epsilon \leq 1/L$. Lastly, assume $f$ to be a convex. Subsequently, we have that $$-\epsilon(1-\frac{L\epsilon}{2})\leq -\frac{1}{2}.$$ Plugging this back into the above inequality yields
 
 $$
 \begin{aligned}
@@ -89,24 +89,24 @@ At this point, we have some idea (lower bound) about how much the function has b
 
 $$
 \begin{aligned}
-\|x_{k+1}-x^_\| &= \|x_k-\epsilon \nabla f(x_k) -x^_\|^2_2\\
-&= \|x_k-x^_\|^2 +\epsilon^2\|\nabla f(x_k)\|^2 -2\epsilon \langle \nabla f(x_k),x_k-x^_\rangle\\
-&\leq \|x_k-x^_\|^2 + \epsilon^2\|\nabla f(x_k)\|^2 +2\epsilon(f(x^_)-f(x_k))~~~(\because \text{convexity}).
+\|x_{k+1}-x^\star\| &= \|x_k-\epsilon \nabla f(x_k) -x^\star\|^2_2\\
+&= \|x_k-x^\star\|^2 +\epsilon^2\|\nabla f(x_k)\|^2 -2\epsilon \langle \nabla f(x_k),x_k-x^\star\rangle\\
+&\leq \|x_k-x^\star\|^2 + \epsilon^2\|\nabla f(x_k)\|^2 +2\epsilon(f(x^\star)-f(x_k))~~~(\because \text{convexity}).
 \end{aligned}
 $$
 
 Applying telescoping summation, we obtain
 
 $$
-\|x_{k+1}-x^_\| \leq \epsilon^2 \sum_{t=1}^k\|\nabla f(x_t)\|^2_2 + 2\epsilon \sum_{t=1}^k(f(x^_)-f(x_t)) + \|x_1-x^*\|.
+\|x_{k+1}-x^\star\| \leq \epsilon^2 \sum_{t=1}^k\|\nabla f(x_t)\|^2_2 + 2\epsilon \sum_{t=1}^k(f(x^\star)-f(x_t)) + \|x_1-x^*\|.
 $$
 
 Rearranging this yields
 
 $$
 \begin{aligned}
-\sum_{t=1}^k (f(x_t)-f(x^_)) &\leq \frac{\epsilon}{2}\sum_{t=1}^k\|\nabla f(x_t)\|^2 + \|x_1-x^_\| - \|x_{k+1}-x^_\| \\
-&\leq \frac{\epsilon}{2}\sum_{t=1}^k\|\nabla f(x_t)\|^2 + \|x_1-x^_\| \leq \epsilon M+ \|x_1-x^*\|,
+\sum_{t=1}^k (f(x_t)-f(x^\star)) &\leq \frac{\epsilon}{2}\sum_{t=1}^k\|\nabla f(x_t)\|^2 + \|x_1-x^\star\| - \|x_{k+1}-x^\star\| \\
+&\leq \frac{\epsilon}{2}\sum_{t=1}^k\|\nabla f(x_t)\|^2 + \|x_1-x^\star\| \leq \epsilon M+ \|x_1-x^*\|,
 \end{aligned}
 $$
 
@@ -114,7 +114,7 @@ where finite $M$ exists because $$f\in \mathcal{C}^1_L.$$
 
 In addition, recalling that $f(x_k)$ is a decreasing sequence. Consequently,
 
-$$f(x_{k+1})-f(x^_) \leq \frac{1}{k}\sum_{t=1}^k (f(x_k)-f(x^_)) \leq \frac{1}{k+1}(\epsilon M + \|x_1-x^*\|).$$
+$$f(x_{k+1})-f(x^\star) \leq \frac{1}{k}\sum_{t=1}^k (f(x_k)-f(x^\star)) \leq \frac{1}{k+1}(\epsilon M + \|x_1-x^\star\|).$$
 
 As such, for convex $f$, the convergence is achieved with $$O(\frac{1}{k})$$.
 
