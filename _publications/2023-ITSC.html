@@ -1,0 +1,48 @@
+---
+title: "Tackling Airspace Congestion: A Scalable and Robust Framework for End-to-End UAS Traffic Management"
+collection: publications
+permalink: /publication/2023-congestion
+excerpt: "We present an end-to-end air traffic management framework for Unmanned Aircraft Systems (UAS) operations that
+is both scalable and robust."
+date: 25/9/2023
+venue: "ITSC 2023"
+---
+
+<!-- <p><a href="https://arxiv.org/pdf/2203.15872">Download paper here</a></p> -->
+
+<h2>Abstract</h2>
+
+We present an end-to-end air traffic management framework for Unmanned Aircraft Systems (UAS) operations that is both
+scalable and robust. Our approach involves defining congestion in the airspace and developing a congestion-based cost
+map that can mitigate potential congestion while adhering to regulations and guidelines. Each UAS operation leverages a
+recursively updated cost map in solving the path planning problem, providing scalability of the framework. Additionally,
+we introduce a time-critical controller to enhance the robustness of mission execution. Empirical evidence confirms the
+feasibility and effectiveness of our method, achieving significant reductions in both cumulative and maximum levels of
+airspace congestion.
+
+<h2>Results</h2>
+
+Congestion induced with and without RFTT was compared, and an additional limit on its travel distance per time interval
+was not imposed. This process involves creating a 3D model of the city by comparing off-nadir satellite imagery, and
+then using edge detection to separate buildings from the terrain in vertical satellite images. Resulting terrain,
+roadway, and building models are projected vertically into polygons and color-coded based on their respective zoning to
+generate an airspace capacity map. Using the constructed airspace capacity, we created a congestion map. The paths taken
+by each UAS were visualized in the following figure.
+
+<p float="left" , align="center">
+    <img src=https://github.com/mnjnsng/mnjnsng.github.io/blob/master/images/publication/congestion/congestion_curve.png?raw=true
+        width="200" height="200" />
+</p>
+
+For a more realistic scenario, we obtained a satellite image of a portion of the city of San Carlos, California, and
+processed it to create a congestion map
+
+<p align="center">
+    <img src=https://github.com/mnjnsng/mnjnsng.github.io/blob/master/images/publication/congestion/satellite.pdf?raw=true
+        width=550 />
+    <img src=https://github.com/mnjnsng/mnjnsng.github.io/blob/master/images/publication/congestion/Overlay_6p.pdf?raw=true
+        width=550 />
+</p>
+
+This comprehensive demonstration illustrates the practicality and feasibility of our framework in a real-world
+environment.
