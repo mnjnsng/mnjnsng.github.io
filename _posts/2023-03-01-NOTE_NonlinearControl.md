@@ -6,6 +6,8 @@ tags:
 - Nonlinear Control
 ---
 
+In this post, we review some mathematical preliminaries that are important in understanding the fundamentals of Nonlinear Control theory.
+
 # Mathematical Preliminaries
 
 > Disclaimer: This is a personal note on a lecture that the author took. This document is not intended to be distributed, and it may include some (many) errors.

@@ -6,6 +6,8 @@ tags:
   - Random Processes
 ---
 
+In this post, we review some preliminaries and axiioms to understand the fundamentals of random processes.
+
 # Probability Preliminaries
 
 #### Axioms of Probability Theory

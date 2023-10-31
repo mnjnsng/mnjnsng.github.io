@@ -5,7 +5,7 @@ permalink: /posts/2023/02/Random_Variables/
 tags:
   - Random variables
 ---
-
+In this post, we review some basic definitions to understand the fundamentals of random variables.
 
 # Random Variables
 
