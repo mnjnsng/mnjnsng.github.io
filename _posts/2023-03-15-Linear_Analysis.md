@@ -13,7 +13,7 @@ In this post, some definitions of the normed and inner product space is given wi
     2. $$|\alpha| \cdot \|v\|_\mathcal{V} = \|\alpha v\|_\mathcal{V}$$ for all scalars $$\alpha$$;
     3. $$\|u+v\|_\mathcal{V}\leq \|u\|_\mathcal{V}+\|v\|_\mathcal{V}$$.
 
-**(Example)** For $$p\geq 1$$, $$L_p(-\infty,\infty)$$ denote the vector space of functions mapping $$\mathbb{R}$$ to $$\mathbb{C}^n$$ that satisfy   $$\int_{-\infty}^\infty |u(t)|_p^pdt < \infty.$$
+**(Example)** For $$p\geq 1$$, $$L_p(-\infty,\infty)$$ denote the vector space of functions mapping $$\mathbb{R}$$ to $$\mathbb{C}^n$$ that satisfy   $$\int_{-\infty}^\infty \vert u(t)\vert _p^pdt < \infty.$$
 
 We will typically deal with $$L_2$$ and $$L_\infty$$ space.
 Such definition of norm can be extended to matrices, or more generally, operators by using the induced norm given by
