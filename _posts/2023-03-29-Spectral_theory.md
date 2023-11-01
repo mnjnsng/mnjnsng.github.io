@@ -11,12 +11,9 @@ tags:
 In this post, the definition of a spectrum of a function and its spectral radius is provided. Then, some useful properties are stated, and some examples problems are solved using the properties.
 
 > **(Definition)** Let $$\mathcal{V}$$ be a Banach Space, and $$M\in \mathcal{L}(\mathcal{V}).$$ The spectrum of $M$ is defined by
-
-    $$spec(M) := \{\lambda\in \mathbb{C} : (\lambda I-M) \text{ is not invertible in } \mathcal{L}(\mathcal{V})\},$$
-    
+$$spec(M) := \{\lambda\in \mathbb{C} : (\lambda I-M) \text{ is not invertible in } \mathcal{L}(\mathcal{V})\},$$
     and the spectral radius of $M$ by
-    
-    $$\rho(M):= \max\{|\lambda|:\lambda \in spec(M)\}.$$
+$$\rho(M):= \max\{|\lambda|:\lambda \in spec(M)\}.$$
 
 Spectral radius intuitively is the maximum magnitude of a gain of the operator. Following are useful properties of the spectral radius.
 
