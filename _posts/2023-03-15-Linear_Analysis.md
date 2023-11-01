@@ -41,7 +41,8 @@ When $$\mathcal{V} = \mathbb{C}^n$$,
 $$ \|F\|_\mathcal{V} = \sup_{v \in \mathcal{V}, \|v\|=1} \|Fv\| = \sup_{v \in \mathcal{V}, \|v\|=1} \|v^* F^*Fv\| =:\bar{\sigma}(F).$$
 
 > **(Cauchy-Schwartz inequality)**
-    $$|<u,v>| \leq \|u\|\|v\|.$$
+
+$$|<u,v>| \leq \|u\|\|v\|.$$
 
 Matrix extension of the concept of inner product is
 
