@@ -8,7 +8,7 @@ tags:
 - Spectral Theory
 ---
 
-In this post, the definition of a spectrum of a function and its spectral radius is provided. Then, some useful properties are stated, and some examples problems are solved using the properties.
+In this post, the definition of a spectrum of a function and its spectral radius is provided. Then, some useful properties are stated.
 
 > **(Definition)** Let $$\mathcal{V}$$ be a Banach Space, and $$M\in \mathcal{L}(\mathcal{V}).$$ The spectrum of $M$ is defined by
 $$spec(M) := \{\lambda\in \mathbb{C} : (\lambda I-M) \text{ is not invertible in } \mathcal{L}(\mathcal{V})\},$$
