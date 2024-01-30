@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-## :neutral_face: About Me
+## 😐 About Me
 
 Hello! I am a Ph.D. candidate at University of Illinois Urbana-Champaign in the [Mechanical Science and Engineering departement](https://mechse.illinois.edu/) since August 2021. I am affiliated to the [Advanced Controls Research Laboratory](http://naira.mechse.illinois.edu/), supervised by Professor Naira Hovakimyan. My research interest is in bringing data-driven control and robust & adaptive control together for autonomous systems to address safety problems. More generally speaking, I am interested in making things work with theoretical guarantees in the presence of uncertainty.
 
@@ -15,7 +15,7 @@ Currently, I am the PI of the project *Congestion Aware Path Planning for Optima
 
 ---
 
-## :bookmark_tabs: Updates
+## 📑 Updates
 
 - **Jan 2024**:
   - Our paper *Robust Model Based Reinforcement Learning using $\mathcal{L}_1$ Adaptive Control* has been accepted at ICLR 2024. You can find the full paper and reviews [here](https://openreview.net/forum?id=GaLCLvJaoF&noteId=0fW3HMWMBf).
