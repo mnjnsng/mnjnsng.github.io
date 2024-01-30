@@ -7,12 +7,22 @@ redirect_from:
   - /about/
   - /about.html
 ---
+## :neutral_face: About Me
 
-Hello! I am currently working towards a Ph.D. degree at the University of Illinois Urbana-Champaign in the [Mechanical Science and Engineering departement](https://mechse.illinois.edu/) since August 2021. Also, I am enrolled in the [Data Science & Engineering (DSE) Graduate Concentration program](https://cse.illinois.edu/cse-educational-programs/dse-graduate-concentration/) provided by the Computational Science and Engineering department since January 2023. I am affiliated to the [Advanced Controls Research Laboratory](http://naira.mechse.illinois.edu/), supervised by Professor Naira Hovakimyan. My research interest is in bringing data-driven control and robust & adaptive control together for autonomous systems in order to maximize the performance while minimizing the safety risk. More generally speaking, I am interested in making things work with theoretical guarantees in the presence of uncertainty.
+Hello! I am a Ph.D. candidate at University of Illinois Urbana-Champaign in the [Mechanical Science and Engineering departement](https://mechse.illinois.edu/) since August 2021. I am affiliated to the [Advanced Controls Research Laboratory](http://naira.mechse.illinois.edu/), supervised by Professor Naira Hovakimyan. My research interest is in bringing data-driven control and robust & adaptive control together for autonomous systems to address safety problems. More generally speaking, I am interested in making things work with theoretical guarantees in the presence of uncertainty.
 
-Currently, I am the PI of the project **Congestion Aware Path Planning for Optimal UAS Traffic Management** supported by [NASA](https://nari.arc.nasa.gov/usrc) (May 2022 - Current). Description of our work including the interview can be found [here](https://mechse.illinois.edu/news/46992), and we will largely appreciate any penny to support our work via [crowdfunding](https://gofund.me/5ea95d35).
+Currently, I am the PI of the project *Congestion Aware Path Planning for Optimal UAS Traffic Management* supported by [NASA](https://nari.arc.nasa.gov/usrc) (May 2022 - Current). Description of our work including the interview can be found [here](https://mechse.illinois.edu/news/46992), and we will largely appreciate any penny to support our work via [crowdfunding](https://gofund.me/5ea95d35).
 
-Outside of work, I enjoy many different outdoor activities including openwater diving, soccer, golf, etc. I like to read books and watch documentaries on Economics and history!
+---
+
+## :bookmark_tabs: Updates
+
+- **Jan 2024**:
+  - Our paper *Robust Model Based Reinforcement Learning using $\mathcal{L}_1$ Adaptive Control* has been accepted at ICLR 2024. You can find the full paper and reviews [here](https://openreview.net/forum?id=GaLCLvJaoF&noteId=0fW3HMWMBf).
+
+- **Jul 2023**
+  - Our paper *Tackling Airspace Congestion: A Scalable and Robust Framework for End-to-End UAS Traffic Management* has been accepted at ITSC 2023!
+  - Our paper *Pure Pursuit Strategy Enhanced with Defense Margin under Noisy Measurements for Protective Missions* has been accepted at CDC 2023! You can find the full paper [here](https://ieeexplore.ieee.org/abstract/document/10383746/?casa_token=YE5RsniAPKUAAAAA:p5IziNpcp5UXflFas3WARPwLc3pafiZaTB5FXk7CzJ3SzetLpfhN-6fuZc_CG42jWLgE4ABaDQ).
 
 <!-- # Research Interests
 
