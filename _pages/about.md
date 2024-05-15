@@ -17,6 +17,9 @@ Currently, I am the PI of the project *Congestion Aware Path Planning for Optima
 
 ## 📑 Updates
 
+- **Feb 2024**:
+  - I received an *Oral Presentation Award* in The Coordinated Science Laboratory Student Conference (CSLSC) at UIUC.
+
 - **Jan 2024**:
   - Our paper *Robust Model Based Reinforcement Learning using $\mathcal{L}_1$ Adaptive Control* has been accepted at ICLR 2024. You can find the full paper and reviews [here](https://openreview.net/forum?id=GaLCLvJaoF&noteId=0fW3HMWMBf).
 
